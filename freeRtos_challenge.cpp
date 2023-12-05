@@ -5,8 +5,8 @@
 // global configurations
 #define BACKGROUND_CORE 0
 #define UART_BAUD_RATE         112500  //UART baud rate [Bps]
-#define XILO_TASK_UPDATE_FREQ   20     //Xilophone Task update rate [Hz]
-#define XILO_TASK_DELAY_TICKS  ((1000/XILO_TASK_UPDATE_FREQ) / portTICK_PERIOD_MS) // Xilophone task delay between runs [ticks]
+#define XILO_TASK_UPDATE_FREQ   20     //Xylophone Task update rate [Hz]
+#define XILO_TASK_DELAY_TICKS  ((1000/XILO_TASK_UPDATE_FREQ) / portTICK_PERIOD_MS) // Xylophone task delay between runs [ticks]
 #define SWITCH_TASK_DELAY_TICKS (25 / portTICK_PERIOD_MS)  // switch task delay between runs [ticks] (assumes up to 1000/25=40 keystroke per seconds)
 
 // pins definition
@@ -15,6 +15,7 @@
 //forward declarations
 void setup();
 void vXylophoneTask( void * pvParameters );
+void vSwitchTask( void * pvParameters );
 uint8_t uGetLastXyloCounter();
 
 //global variables
