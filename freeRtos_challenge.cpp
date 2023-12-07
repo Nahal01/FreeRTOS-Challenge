@@ -75,6 +75,8 @@ void setup()
               NULL,                 /* Parameter passed as input of the task */
               1,                    /* Priority of the task. */
               NULL);                /* Task handle. */
+
+   vTaskStartScheduler();
 }
 
 uint8_t uGetLastXyloCounter()
